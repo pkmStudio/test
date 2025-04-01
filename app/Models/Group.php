@@ -16,4 +16,10 @@ class Group extends Model
     {
         return $this->hasMany(Group::class, 'id_parent');
     }
+
+    public function products(): HasMany
+    {
+        return $this->hasMany(Product::class, 'id_group');
+    }
+
 }
